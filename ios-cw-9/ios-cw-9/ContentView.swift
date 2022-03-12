@@ -35,6 +35,22 @@ struct ContentView: View {
                     .background(Color(#colorLiteral(red: 0.975943625, green: 0.7875768542, blue: 0, alpha: 1)))
                     .clipShape(RoundedRectangle(cornerRadius: 25))
                     .onTapGesture {
+                        if Double(enterGrade) ?? 0 >= 90 {
+                            grade = "a"
+                        }
+                        else if Double(enterGrade) ?? 0 >= 80 {
+                            grade = "b"
+                        }
+                       else if Double(enterGrade) ?? 0 >= 70 {
+                            grade = "c"
+                        }
+                       else if Double(enterGrade) ?? 0 >= 60 {
+                            grade = "d"
+                        }
+                        else {
+                             grade = "e"
+                         }
+                        
                         // enter the code here  اكتب الكود هنا
                         // if statement
                         // here يجب أن تتغير الصورة على حسب الدرجة
